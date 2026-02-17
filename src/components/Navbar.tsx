@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/chillzone-logo.png";
 
 const navItems = [
   { label: "Home", path: "/" },
@@ -15,8 +16,8 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-glass">
       <div className="container mx-auto flex items-center justify-between py-4 px-6">
-        <Link to="/" className="font-heading text-2xl font-bold text-gradient-teal">
-          ChillZone
+        <Link to="/" className="flex items-center">
+          <img src={logo} alt="ChillZone" className="h-12 w-auto" />
         </Link>
 
         {/* Desktop */}

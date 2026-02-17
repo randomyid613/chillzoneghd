@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone } from "lucide-react";
+import logo from "@/assets/chillzone-logo.png";
+import lotteryLogo from "@/assets/national-lottery-logo.png";
 
 const Footer = () => {
   return (
@@ -7,11 +9,12 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="grid gap-8 md:grid-cols-3">
           <div>
-            <h3 className="font-heading text-xl font-bold text-gradient-teal mb-3">ChillZone</h3>
+            <img src={logo} alt="ChillZone" className="h-14 w-auto mb-3" />
             <p className="text-sm text-muted-foreground leading-relaxed">
               Creating a safe, welcoming, and empowering space for young people within the Jewish community.
             </p>
             <p className="mt-3 text-xs text-muted-foreground">Charity number: 1214818</p>
+            <img src={lotteryLogo} alt="The National Lottery Community Fund" className="mt-4 h-16 w-auto rounded bg-foreground/90 p-2" />
           </div>
 
           <div>
