@@ -39,8 +39,11 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-10 border-t border-border pt-6 text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} ChillZone. All rights reserved.
+        <div className="mt-10 border-t border-border pt-6 flex items-center justify-between text-xs text-muted-foreground">
+          <span>© {new Date().getFullYear()} ChillZone. All rights reserved.</span>
+          <Link to="/gallery?admin=true" className="text-muted-foreground/40 hover:text-muted-foreground transition-colors">
+            Admin
+          </Link>
         </div>
       </div>
     </footer>
