@@ -1,4 +1,5 @@
 import { useState, useRef, useCallback } from "react";
+import { useSearchParams } from "react-router-dom";
 import { LogIn, LogOut, Upload, Trash2, ImageIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -8,6 +9,8 @@ import { useToast } from "@/hooks/use-toast";
 import logo from "@/assets/chillzone-logo.png";
 
 const Gallery = () => {
+  const [searchParams] = useSearchParams();
+  const showLogin = searchParams.get("admin") === "true";
   const [authed, setAuthed] = useState(isLoggedIn());
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -144,8 +147,8 @@ const Gallery = () => {
           </div>
         )}
 
-        {/* Login Form (shown at bottom when not logged in) */}
-        {!authed && (
+        {/* Login Form (shown only when ?admin=true) */}
+        {!authed && showLogin && (
           <div className="mt-16 mx-auto max-w-sm">
             <form onSubmit={handleLogin} className="rounded-2xl border border-border bg-card/60 p-6 backdrop-blur">
               <h2 className="font-heading text-lg font-semibold mb-4 flex items-center gap-2">
