@@ -5,6 +5,7 @@ import logo from "@/assets/chillzone-logo.png";
 
 const navItems = [
   { label: "Home", path: "/" },
+  { label: "Gallery", path: "/gallery" },
   { label: "Contact", path: "/contact" },
   { label: "Donate", path: "/donate" },
 ];
