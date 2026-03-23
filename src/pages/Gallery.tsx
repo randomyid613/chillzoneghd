@@ -33,7 +33,7 @@ const Gallery = () => {
   const loadImages = useCallback(async () => {
     setLoading(true);
     const imgs = await fetchImages();
-    setImages(imgs);
+    setImages(imgs.length > 0 ? imgs : SAMPLE_IMAGES);
     setLoading(false);
   }, []);
 
