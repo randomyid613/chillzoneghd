@@ -1,10 +1,10 @@
-import { useState, useRef, useCallback } from "react";
+import { useState, useRef, useCallback, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
-import { LogIn, LogOut, Upload, Trash2, ImageIcon } from "lucide-react";
+import { LogIn, LogOut, Upload, Trash2, ImageIcon, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { login, logout, isLoggedIn } from "@/lib/auth";
-import { getImages, addImage, removeImage, GalleryImage } from "@/lib/gallery-store";
+import { login, logout, isLoggedIn, getAdminToken } from "@/lib/auth";
+import { fetchImages, uploadImage, deleteImage, GalleryImage } from "@/lib/gallery-store";
 import { useToast } from "@/hooks/use-toast";
 import logo from "@/assets/chillzone-logo.png";
 
@@ -14,10 +14,23 @@ const Gallery = () => {
   const [authed, setAuthed] = useState(isLoggedIn());
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [images, setImages] = useState<GalleryImage[]>(getImages());
+  const [images, setImages] = useState<GalleryImage[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [uploading, setUploading] = useState(false);
   const [caption, setCaption] = useState("");
   const fileRef = useRef<HTMLInputElement>(null);
   const { toast } = useToast();
+
+  const loadImages = useCallback(async () => {
+    setLoading(true);
+    const imgs = await fetchImages();
+    setImages(imgs);
+    setLoading(false);
+  }, []);
+
+  useEffect(() => {
+    loadImages();
+  }, [loadImages]);
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
@@ -34,34 +47,41 @@ const Gallery = () => {
     setAuthed(false);
   };
 
-  const handleUpload = useCallback(() => {
+  const handleUpload = useCallback(async () => {
     const file = fileRef.current?.files?.[0];
     if (!file) return;
     if (!file.type.startsWith("image/")) {
       toast({ title: "Error", description: "Please select an image file", variant: "destructive" });
       return;
     }
-    if (file.size > 5 * 1024 * 1024) {
-      toast({ title: "Error", description: "Image must be under 5 MB", variant: "destructive" });
+    if (file.size > 10 * 1024 * 1024) {
+      toast({ title: "Error", description: "Image must be under 10 MB", variant: "destructive" });
       return;
     }
-    const reader = new FileReader();
-    reader.onload = () => {
-      const src = reader.result as string;
-      addImage(src, caption);
-      setImages(getImages());
+
+    setUploading(true);
+    const result = await uploadImage(file, caption, getAdminToken());
+    setUploading(false);
+
+    if (result) {
+      setImages((prev) => [result, ...prev]);
       setCaption("");
       if (fileRef.current) fileRef.current.value = "";
       toast({ title: "Photo added!" });
-    };
-    reader.readAsDataURL(file);
+    } else {
+      toast({ title: "Upload failed", description: "Check your Worker is deployed and VITE_GALLERY_API_URL is set.", variant: "destructive" });
+    }
   }, [caption, toast]);
 
-  const handleDelete = (id: string) => {
-    removeImage(id);
-    setImages(getImages());
-    toast({ title: "Photo removed" });
-  };
+  const handleDelete = useCallback(async (id: string) => {
+    const ok = await deleteImage(id, getAdminToken());
+    if (ok) {
+      setImages((prev) => prev.filter((img) => img.id !== id));
+      toast({ title: "Photo removed" });
+    } else {
+      toast({ title: "Delete failed", variant: "destructive" });
+    }
+  }, [toast]);
 
   return (
     <main className="min-h-screen pt-28 pb-20">
@@ -98,15 +118,20 @@ const Gallery = () => {
                 onChange={(e) => setCaption(e.target.value)}
                 className="sm:max-w-xs"
               />
-              <Button onClick={handleUpload} className="gap-2 shrink-0">
-                <Upload size={16} /> Add
+              <Button onClick={handleUpload} disabled={uploading} className="gap-2 shrink-0">
+                {uploading ? <Loader2 size={16} className="animate-spin" /> : <Upload size={16} />}
+                {uploading ? "Uploading…" : "Add"}
               </Button>
             </div>
           </div>
         )}
 
         {/* Gallery Grid */}
-        {images.length > 0 ? (
+        {loading ? (
+          <div className="flex items-center justify-center py-24">
+            <Loader2 size={32} className="animate-spin text-primary" />
+          </div>
+        ) : images.length > 0 ? (
           <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             {images.map((img) => (
               <div
@@ -141,8 +166,8 @@ const Gallery = () => {
             <img src={logo} alt="ChillZone" className="h-32 w-auto opacity-30 mb-6" />
             <ImageIcon size={48} className="text-muted-foreground/30 mb-4" />
             <p className="text-muted-foreground">No photos yet — check back soon!</p>
-            {!authed && (
-              <p className="mt-2 text-xs text-muted-foreground/60">Admin? Log in to start uploading.</p>
+            {!authed && showLogin && (
+              <p className="mt-2 text-xs text-muted-foreground/60">Admin? Log in below to start uploading.</p>
             )}
           </div>
         )}
