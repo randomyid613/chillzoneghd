@@ -1,9 +1,15 @@
 import { Heart, ExternalLink } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
+import SEO from "@/components/SEO";
 
 const Donate = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Donate to ChillZone — Support Jewish youth"
+        description="Support ChillZone's work with young people in the Jewish community. Donate via Charity Extra or Achisomoch. Charity number 1214818."
+        path="/donate"
+      />
       {/* Hero */}
       <section className="relative flex min-h-[50vh] items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${heroBg})` }} />

@@ -10,6 +10,7 @@ import logo from "@/assets/chillzone-logo.png";
 import sample1 from "@/assets/sample-gallery-1.jpg";
 import sample2 from "@/assets/sample-gallery-2.jpg";
 import sample3 from "@/assets/sample-gallery-3.jpg";
+import SEO from "@/components/SEO";
 
 const SAMPLE_IMAGES: GalleryImage[] = [
   { id: "sample-1", src: sample1, caption: "Game night fun", addedAt: "" },
@@ -94,6 +95,11 @@ const Gallery = () => {
 
   return (
     <main className="min-h-screen pt-28 pb-20">
+      <SEO
+        title="Gallery — ChillZone moments"
+        description="Photos from ChillZone events, workshops and activities for young people in the Jewish community."
+        path="/gallery"
+      />
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="flex items-center justify-between mb-10">
