@@ -1,4 +1,5 @@
 import { Mail, Phone, MessageCircle } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const contactMethods = [
   {
@@ -27,6 +28,19 @@ const contactMethods = [
 const Contact = () => {
   return (
     <div className="min-h-screen pt-24">
+      <SEO
+        title="Contact ChillZone — Get in touch"
+        description="Reach ChillZone by email, phone or WhatsApp. We'd love to hear from you."
+        path="/contact"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "ChillZone",
+          email: "office@chillzone.org.uk",
+          telephone: "+44 191 648 8918",
+          url: "https://chillzone.org.uk/contact",
+        }}
+      />
       <section className="py-24">
         <div className="container mx-auto px-6">
           <div className="mx-auto max-w-2xl text-center mb-16">

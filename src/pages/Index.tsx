@@ -2,6 +2,7 @@ import { Heart, Users, Shield, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroBg from "@/assets/hero-bg.jpg";
 import logo from "@/assets/chillzone-logo.png";
+import SEO from "@/components/SEO";
 
 const features = [
   {
@@ -33,6 +34,11 @@ const features = [
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="ChillZone — A safe space for Jewish young people"
+        description="ChillZone creates a safe, welcoming and empowering space for young people in the Jewish community — therapeutic support, workshops and friendship."
+        path="/"
+      />
       {/* Hero */}
       <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
         <div
