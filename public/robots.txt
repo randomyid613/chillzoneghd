@@ -14,4 +14,4 @@ User-agent: *
 Allow: /
 Disallow: /gallery?admin=true
 
-Sitemap: https://chillzoneghd.lovable.app/sitemap.xml
+Sitemap: https://chillzone.org.uk/sitemap.xml
