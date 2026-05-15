@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { login, logout, isLoggedIn, getAdminToken } from "@/lib/auth";
 import { fetchImages, uploadImage, deleteImage, GalleryImage } from "@/lib/gallery-store";
 import { useToast } from "@/hooks/use-toast";
-import logo from "@/assets/chillzone-logo.png";
+import logo from "@/assets/chillzone-logo.webp";
 import sample1 from "@/assets/sample-gallery-1.jpg";
 import sample2 from "@/assets/sample-gallery-2.jpg";
 import sample3 from "@/assets/sample-gallery-3.jpg";

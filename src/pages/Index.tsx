@@ -1,7 +1,7 @@
 import { Heart, Users, Shield, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroBg from "@/assets/hero-bg.jpg";
-import logo from "@/assets/chillzone-logo.png";
+import heroBg from "@/assets/hero-bg.webp";
+import logo from "@/assets/chillzone-logo.webp";
 import SEO from "@/components/SEO";
 
 const features = [
@@ -48,7 +48,15 @@ const Index = () => {
         <div className="absolute inset-0 bg-background/60" />
         <div className="relative z-10 container mx-auto px-6 text-center">
           <h1 className="sr-only">ChillZone — A safe space for Jewish young people</h1>
-          <img src={logo} alt="ChillZone — A safe space for Jewish young people" className="animate-fade-up mx-auto h-40 sm:h-56 lg:h-64 w-auto drop-shadow-2xl" />
+          <img
+            src={logo}
+            alt="ChillZone — A safe space for Jewish young people"
+            width={600}
+            height={600}
+            fetchPriority="high"
+            decoding="async"
+            className="animate-fade-up mx-auto h-40 sm:h-56 lg:h-64 w-auto drop-shadow-2xl"
+          />
           <p className="animate-fade-up-delay-1 mx-auto mt-6 max-w-2xl text-lg text-foreground/80 sm:text-xl">
             Creating a safe, welcoming, and empowering space for young people within the Jewish community.
           </p>

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone } from "lucide-react";
-import logo from "@/assets/chillzone-logo.png";
+import logo from "@/assets/chillzone-logo.webp";
 import lotteryLogo from "@/assets/national-lottery-logo.png";
 
 const Footer = () => {
