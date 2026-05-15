@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="grid gap-8 md:grid-cols-3">
           <div>
-            <img src={logo} alt="ChillZone" className="h-14 w-auto mb-3" />
+            <img src={logo} alt="ChillZone — A safe space for Jewish young people" className="h-14 w-auto mb-3" />
             <p className="text-sm text-muted-foreground leading-relaxed">
               Creating a safe, welcoming, and empowering space for young people within the Jewish community.
             </p>
@@ -18,7 +18,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-heading text-sm font-semibold text-foreground mb-3">Quick Links</h4>
+            <h3 className="font-heading text-sm font-semibold text-foreground mb-3">Quick Links</h3>
             <div className="flex flex-col gap-2">
               <Link to="/" className="text-sm text-muted-foreground hover:text-primary transition-colors">Home</Link>
               <Link to="/contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">Contact Us</Link>
@@ -27,7 +27,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-heading text-sm font-semibold text-foreground mb-3">Get In Touch</h4>
+            <h3 className="font-heading text-sm font-semibold text-foreground mb-3">Get In Touch</h3>
             <div className="flex flex-col gap-2">
               <a href="mailto:office@chillzone.org.uk" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
                 <Mail size={14} /> office@chillzone.org.uk
