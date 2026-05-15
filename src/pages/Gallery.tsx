@@ -42,10 +42,12 @@ const Gallery = () => {
     loadImages();
   }, [loadImages]);
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (login(email, password)) {
+    const ok = await login(email, password);
+    if (ok) {
       setAuthed(true);
+      setPassword("");
       toast({ title: "Logged in", description: "Welcome back!" });
     } else {
       toast({ title: "Error", description: "Invalid credentials", variant: "destructive" });
