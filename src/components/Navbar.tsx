@@ -18,7 +18,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-glass">
       <div className="container mx-auto flex items-center justify-between py-4 px-6">
         <Link to="/" className="flex items-center">
-          <img src={logo} alt="ChillZone — A safe space for Jewish young people" className="h-12 w-auto" />
+          <img src={logo} alt="ChillZone — A safe space for Jewish young people" width={600} height={600} className="h-12 w-auto" />
         </Link>
 
         {/* Desktop */}
