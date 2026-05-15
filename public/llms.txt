@@ -1,0 +1,10 @@
+# ChillZone
+
+> ChillZone (UK Charity 1214818) creates a safe, welcoming and empowering space for young people in the Jewish community — therapeutic support, workshops and friendship.
+
+## Pages
+
+- [Home](/): Mission, what we do, and how to get involved.
+- [Gallery](/gallery): Photos from ChillZone events, workshops and activities.
+- [Contact](/contact): Email, phone and WhatsApp contact details.
+- [Donate](/donate): Donate via Charity Extra or Achisomoch.

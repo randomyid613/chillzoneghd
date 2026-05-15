@@ -125,10 +125,12 @@ const Gallery = () => {
                 ref={fileRef}
                 type="file"
                 accept="image/*"
+                aria-label="Choose photo to upload"
                 className="block w-full text-sm text-muted-foreground file:mr-4 file:rounded-full file:border-0 file:bg-primary file:px-4 file:py-2 file:text-sm file:font-semibold file:text-primary-foreground hover:file:bg-primary/90 cursor-pointer"
               />
               <Input
                 placeholder="Caption (optional)"
+                aria-label="Photo caption"
                 value={caption}
                 onChange={(e) => setCaption(e.target.value)}
                 className="sm:max-w-xs"
@@ -178,7 +180,7 @@ const Gallery = () => {
           </div>
         ) : (
           <div className="flex flex-col items-center justify-center py-24 text-center">
-            <img src={logo} alt="ChillZone" className="h-32 w-auto opacity-30 mb-6" />
+            <img src={logo} alt="ChillZone — A safe space for Jewish young people" className="h-32 w-auto opacity-30 mb-6" />
             <ImageIcon size={48} className="text-muted-foreground/30 mb-4" />
             <p className="text-muted-foreground">No photos yet — check back soon!</p>
             {!authed && showLogin && (
