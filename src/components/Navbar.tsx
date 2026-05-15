@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/chillzone-logo.png";
+import logo from "@/assets/chillzone-logo.webp";
 
 const navItems = [
   { label: "Home", path: "/" },

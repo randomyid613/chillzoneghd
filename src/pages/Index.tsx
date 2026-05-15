@@ -1,7 +1,7 @@
 import { Heart, Users, Shield, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroBg from "@/assets/hero-bg.jpg";
-import logo from "@/assets/chillzone-logo.png";
+import heroBg from "@/assets/hero-bg.webp";
+import logo from "@/assets/chillzone-logo.webp";
 import SEO from "@/components/SEO";
 
 const features = [
