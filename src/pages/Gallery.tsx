@@ -159,7 +159,7 @@ const Gallery = () => {
               >
                 <img
                   src={img.src}
-                  alt={img.caption || "Gallery photo"}
+                  alt={img.caption || "ChillZone event moment"}
                   className="aspect-square w-full object-cover"
                   loading="lazy"
                 />
@@ -202,6 +202,7 @@ const Gallery = () => {
                 <Input
                   type="email"
                   placeholder="Email"
+                  aria-label="Admin email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
@@ -209,6 +210,7 @@ const Gallery = () => {
                 <Input
                   type="password"
                   placeholder="Password"
+                  aria-label="Admin password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
