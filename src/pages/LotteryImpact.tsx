@@ -155,7 +155,7 @@ const LotteryImpact = () => {
       <SEO
         title="National Lottery Community Fund Impact — ChillZone"
         description="How National Lottery Community Fund funding helped ChillZone create a safe space for girls aged 15–22 in Gateshead to socialise, build confidence and belong."
-        path="/national-lottery-community-fund-impact"
+        path="/impact"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "Project",
