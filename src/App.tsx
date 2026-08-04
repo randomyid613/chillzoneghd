@@ -26,6 +26,7 @@ const App = () => (
           <Route path="/donate" element={<Donate />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/national-lottery-community-fund-impact" element={<LotteryImpact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
