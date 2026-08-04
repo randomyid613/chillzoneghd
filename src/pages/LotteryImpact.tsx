@@ -153,15 +153,27 @@ const LotteryImpact = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="National Lottery Community Fund Impact — ChillZone"
-        description="How National Lottery Community Fund funding helped ChillZone create a safe space for girls aged 15–22 in Gateshead to socialise, build confidence and belong."
+        title="National Lottery Community Fund Impact | ChillZone Gateshead"
+        description="How National Lottery Community Fund funding helps ChillZone give girls aged 15–22 in Gateshead a safe space to socialise, build confidence and belong."
         path="/impact"
+        image="/impact-og.jpg"
+        imageAlt="Girls enjoying creative activities together at a ChillZone session in Gateshead"
+        twitterCard="summary_large_image"
         jsonLd={{
           "@context": "https://schema.org",
-          "@type": "Project",
+          "@type": "WebPage",
           name: "The National Lottery Community Fund Impact — ChillZone",
-          funder: { "@type": "Organization", name: "The National Lottery Community Fund" },
-          areaServed: "Gateshead, United Kingdom",
+          url: "https://chillzone.org.uk/impact",
+          description:
+            "How National Lottery Community Fund funding helps ChillZone give girls aged 15–22 in Gateshead a safe space to socialise, build confidence and belong.",
+          primaryImageOfPage: "https://chillzone.org.uk/impact-og.jpg",
+          about: {
+            "@type": "Project",
+            name: "Helping Teenage Girls in Gateshead Socialise and Develop Together",
+            funder: { "@type": "Organization", name: "The National Lottery Community Fund" },
+            areaServed: "Gateshead, United Kingdom",
+          },
+          publisher: { "@type": "NGO", name: "ChillZone", url: "https://chillzone.org.uk" },
         }}
       />
 
