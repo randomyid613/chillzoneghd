@@ -19,6 +19,7 @@ const entries: SitemapEntry[] = [
   { path: "/gallery", lastmod: today, changefreq: "weekly", priority: "0.8" },
   { path: "/contact", lastmod: today, changefreq: "monthly", priority: "0.7" },
   { path: "/donate", lastmod: today, changefreq: "monthly", priority: "0.9" },
+  { path: "/national-lottery-community-fund-impact", lastmod: today, changefreq: "monthly", priority: "0.8" },
 ];
 
 function generateSitemap(entries: SitemapEntry[]) {

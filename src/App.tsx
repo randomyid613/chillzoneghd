@@ -9,6 +9,7 @@ import Index from "./pages/Index";
 import Donate from "./pages/Donate";
 import Contact from "./pages/Contact";
 import Gallery from "./pages/Gallery";
+import LotteryImpact from "./pages/LotteryImpact";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
