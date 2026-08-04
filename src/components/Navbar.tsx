@@ -5,6 +5,7 @@ import logo from "@/assets/chillzone-logo.webp";
 
 const navItems = [
   { label: "Home", path: "/" },
+  { label: "Impact", path: "/national-lottery-community-fund-impact" },
   { label: "Gallery", path: "/gallery" },
   { label: "Contact", path: "/contact" },
   { label: "Donate", path: "/donate" },

@@ -9,6 +9,7 @@ import Index from "./pages/Index";
 import Donate from "./pages/Donate";
 import Contact from "./pages/Contact";
 import Gallery from "./pages/Gallery";
+import LotteryImpact from "./pages/LotteryImpact";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/donate" element={<Donate />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/national-lottery-community-fund-impact" element={<LotteryImpact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
