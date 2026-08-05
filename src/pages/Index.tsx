@@ -48,10 +48,10 @@ const Index = () => {
         />
         <div className="absolute inset-0 bg-background/60" />
         <div className="relative z-10 container mx-auto px-6 text-center">
-          <h1 className="sr-only">ChillZone — A safe space for Jewish young people</h1>
+          <h1 className="sr-only">ChillZone Gateshead — a safe space for Jewish young people</h1>
           <img
             src={logo}
-            alt="ChillZone — A safe space for Jewish young people"
+            alt="ChillZone (Chill Zone) Gateshead — A safe space for Jewish young people"
             width={600}
             height={600}
             fetchPriority="high"
@@ -59,8 +59,10 @@ const Index = () => {
             className="animate-fade-up mx-auto h-40 sm:h-56 lg:h-64 w-auto drop-shadow-2xl"
           />
           <p className="animate-fade-up-delay-1 mx-auto mt-6 max-w-2xl text-lg text-foreground/80 sm:text-xl">
-            Creating a safe, welcoming, and empowering space for young people within the Jewish community.
+            ChillZone is a safe, welcoming and empowering space for young people within the Jewish
+            community in Gateshead.
           </p>
+
           <div className="animate-fade-up-delay-2 mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="https://www.charityextra.com/charity/chillzone"
