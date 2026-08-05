@@ -35,10 +35,11 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="ChillZone — A safe space for Jewish young people"
-        description="ChillZone creates a safe, welcoming and empowering space for young people in the Jewish community — therapeutic support, workshops and friendship."
+        title="ChillZone Gateshead — A safe space for Jewish young people"
+        description="ChillZone (Chill Zone) in Gateshead is a safe, welcoming and empowering space for Jewish young people — therapeutic support, workshops, activities and friendship. Charity 1214818."
         path="/"
       />
+
       {/* Hero */}
       <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
         <div
