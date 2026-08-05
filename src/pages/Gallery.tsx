@@ -1,22 +1,14 @@
 import { useState, useRef, useCallback, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
-import { LogIn, LogOut, Upload, Trash2, ImageIcon, Loader2 } from "lucide-react";
+import { LogIn, LogOut, Upload, Trash2, Construction, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { login, logout, isLoggedIn, getAdminToken } from "@/lib/auth";
 import { fetchImages, uploadImage, deleteImage, GalleryImage } from "@/lib/gallery-store";
 import { useToast } from "@/hooks/use-toast";
 import logo from "@/assets/chillzone-logo.webp";
-import sample1 from "@/assets/sample-gallery-1.jpg";
-import sample2 from "@/assets/sample-gallery-2.jpg";
-import sample3 from "@/assets/sample-gallery-3.jpg";
 import SEO from "@/components/SEO";
 
-const SAMPLE_IMAGES: GalleryImage[] = [
-  { id: "sample-1", src: sample1, caption: "Game night fun", addedAt: "" },
-  { id: "sample-2", src: sample2, caption: "Arts & crafts workshop", addedAt: "" },
-  { id: "sample-3", src: sample3, caption: "Outdoor adventure day", addedAt: "" },
-];
 
 const Gallery = () => {
   const [searchParams] = useSearchParams();
