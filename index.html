@@ -3,46 +3,92 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ChillZone — A safe space for Jewish young people</title>
+    <title>ChillZone Gateshead — A safe space for Jewish young people</title>
     <link rel="icon" href="/favicon.png" type="image/png" />
     <link rel="apple-touch-icon" href="/logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" />
-    <meta name="description" content="ChillZone creates a safe, welcoming and empowering space for young people in the Jewish community — therapeutic support, workshops and friendship." />
+    <meta name="description" content="ChillZone (Chill Zone) in Gateshead is a safe, welcoming and empowering space for Jewish young people — therapeutic support, workshops, activities and friendship. Registered charity 1214818." />
     <meta name="author" content="ChillZone" />
 
-    <meta property="og:title" content="ChillZone — A safe space for Jewish young people" />
-    <meta property="og:description" content="A safe, welcoming and empowering space for young people in the Jewish community." />
+    <meta property="og:title" content="ChillZone Gateshead — A safe space for Jewish young people" />
+    <meta property="og:description" content="ChillZone (Chill Zone) Gateshead: a safe, welcoming and empowering space for Jewish young people. Registered charity 1214818." />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://chillzone.org.uk/logo.png" />
     <meta property="og:site_name" content="ChillZone" />
 
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="ChillZone" />
-    <meta name="twitter:description" content="A safe, welcoming and empowering space for young people in the Jewish community." />
+    <meta name="twitter:title" content="ChillZone Gateshead" />
+    <meta name="twitter:description" content="ChillZone (Chill Zone) Gateshead: a safe, welcoming and empowering space for Jewish young people." />
     <meta name="twitter:image" content="https://chillzone.org.uk/logo.png" />
 
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "NGO",
-        "name": "ChillZone",
-        "url": "https://chillzone.org.uk",
-        "logo": "https://chillzone.org.uk/logo.png",
-        "description": "A safe, welcoming and empowering space for young people in the Jewish community.",
-        "email": "office@chillzone.org.uk",
-        "telephone": "+44 191 648 8918",
-        "identifier": "Charity number: 1214818",
-        "sameAs": [
-          "https://www.charityextra.com/charity/chillzone"
-        ],
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+44 191 648 8918",
-          "email": "office@chillzone.org.uk",
-          "contactType": "customer support"
-        }
+        "@graph": [
+          {
+            "@type": ["NGO", "Organization"],
+            "@id": "https://chillzone.org.uk/#organisation",
+            "name": "ChillZone",
+            "legalName": "ChillZone",
+            "alternateName": [
+              "Chill Zone",
+              "ChillZone Gateshead",
+              "Chill Zone Gateshead",
+              "ChillZone GHD",
+              "chillzone.org.uk"
+            ],
+            "url": "https://chillzone.org.uk",
+            "logo": "https://chillzone.org.uk/logo.png",
+            "image": "https://chillzone.org.uk/logo.png",
+            "description": "ChillZone is a safe, welcoming and empowering space for Jewish young people in Gateshead — therapeutic support, workshops, activities and friendship.",
+            "email": "office@chillzone.org.uk",
+            "telephone": "+44 191 648 8918",
+            "identifier": "Charity number: 1214818",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Gateshead",
+              "addressRegion": "Tyne and Wear",
+              "addressCountry": "GB"
+            },
+            "areaServed": [
+              { "@type": "City", "name": "Gateshead" },
+              { "@type": "AdministrativeArea", "name": "Tyne and Wear" },
+              { "@type": "Country", "name": "United Kingdom" }
+            ],
+            "knowsAbout": [
+              "youth work",
+              "young people's wellbeing",
+              "Jewish community support",
+              "creative workshops"
+            ],
+            "funder": {
+              "@type": "Organization",
+              "name": "The National Lottery Community Fund"
+            },
+            "sameAs": [
+              "https://www.charityextra.com/charity/chillzone"
+            ],
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+44 191 648 8918",
+              "email": "office@chillzone.org.uk",
+              "contactType": "customer support",
+              "areaServed": "GB",
+              "availableLanguage": "English"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://chillzone.org.uk/#website",
+            "url": "https://chillzone.org.uk",
+            "name": "ChillZone",
+            "alternateName": ["Chill Zone", "ChillZone Gateshead"],
+            "inLanguage": "en-GB",
+            "publisher": { "@id": "https://chillzone.org.uk/#organisation" }
+          }
+        ]
       }
     </script>
   </head>

@@ -1,10 +1,18 @@
-# ChillZone
+# ChillZone (Chill Zone) Gateshead
 
-> ChillZone (UK Charity 1214818) creates a safe, welcoming and empowering space for young people in the Jewish community — therapeutic support, workshops and friendship.
+> ChillZone — also written "Chill Zone" — is a UK registered charity (number 1214818) in Gateshead, Tyne and Wear. It creates a safe, welcoming and empowering space for Jewish young people: therapeutic support, workshops, activities and friendship.
+
+Also known as: ChillZone Gateshead, Chill Zone Gateshead, ChillZone GHD, chillzone.org.uk
 
 ## Pages
 
 - [Home](/): Mission, what we do, and how to get involved.
+- [Impact](/impact): How The National Lottery Community Fund funding helped young women in Gateshead.
 - [Gallery](/gallery): Photos from ChillZone events, workshops and activities.
 - [Contact](/contact): Email, phone and WhatsApp contact details.
 - [Donate](/donate): Donate via Charity Extra or Achisomoch.
+
+## Contact
+
+- Email: office@chillzone.org.uk
+- Phone: +44 191 648 8918
