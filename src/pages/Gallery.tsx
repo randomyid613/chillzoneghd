@@ -26,7 +26,7 @@ const Gallery = () => {
   const loadImages = useCallback(async () => {
     setLoading(true);
     const imgs = await fetchImages();
-    setImages(imgs.length > 0 ? imgs : SAMPLE_IMAGES);
+    setImages(imgs);
     setLoading(false);
   }, []);
 
@@ -173,12 +173,17 @@ const Gallery = () => {
             ))}
           </div>
         ) : (
-          <div className="flex flex-col items-center justify-center py-24 text-center">
-            <img src={logo} alt="ChillZone — A safe space for Jewish young people" className="h-32 w-auto opacity-30 mb-6" />
-            <ImageIcon size={48} className="text-muted-foreground/30 mb-4" />
-            <p className="text-muted-foreground">No photos yet — check back soon!</p>
+          <div className="mx-auto max-w-xl rounded-3xl border border-border bg-card/60 p-10 text-center backdrop-blur">
+            <img src={logo} alt="ChillZone — A safe space for Jewish young people" className="mx-auto h-24 w-auto opacity-40 mb-6" />
+            <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10">
+              <Construction size={28} className="text-primary" />
+            </div>
+            <h2 className="font-heading text-2xl font-bold text-gradient-teal">Gallery under construction</h2>
+            <p className="mt-3 text-muted-foreground">
+              We're busy putting together photos from our sessions, workshops and trips. Check back soon to see ChillZone in action.
+            </p>
             {!authed && showLogin && (
-              <p className="mt-2 text-xs text-muted-foreground/60">Admin? Log in below to start uploading.</p>
+              <p className="mt-4 text-xs text-muted-foreground/60">Admin? Log in below to start uploading.</p>
             )}
           </div>
         )}
