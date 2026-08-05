@@ -91,9 +91,11 @@ const Index = () => {
             </h2>
             <p className="mt-6 text-muted-foreground leading-relaxed text-lg">
               We recognise that growing up can bring unique challenges, and we're here to offer
-              meaningful support every step of the way. ChillZone provides a therapeutic environment
+              meaningful support every step of the way. ChillZone — also written Chill Zone — is a
+              registered charity (number 1214818) in Gateshead, providing a therapeutic environment
               where young people can talk openly, receive guidance from experienced professionals, and
               build the emotional resilience they need to thrive.
+
             </p>
           </div>
         </div>
